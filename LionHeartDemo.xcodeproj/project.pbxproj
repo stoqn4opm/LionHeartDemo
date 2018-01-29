@@ -17,6 +17,7 @@
 		32D78BBE201F7DBF0071B926 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32D78B99201F75C40071B926 /* AppDelegate.swift */; };
 		32D78BBF201F7DC30071B926 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 32D78BA2201F75C40071B926 /* LaunchScreen.storyboard */; };
 		32D78BC0201F7DC80071B926 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 32D78BA0201F75C40071B926 /* Assets.xcassets */; };
+		32D78BC2201F80320071B926 /* DummyImages.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 32D78BC1201F80320071B926 /* DummyImages.xcassets */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -29,6 +30,7 @@
 		32D78BAB201F78FE0071B926 /* MainFeedCollectionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainFeedCollectionViewController.swift; sourceTree = "<group>"; };
 		32D78BB9201F7ABE0071B926 /* LionHeartDemo Dummy.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "LionHeartDemo Dummy.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		32D78BBB201F7B190071B926 /* Info-Dummy.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "Info-Dummy.plist"; sourceTree = "<group>"; };
+		32D78BC1201F80320071B926 /* DummyImages.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = DummyImages.xcassets; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -73,6 +75,7 @@
 				32D78BAB201F78FE0071B926 /* MainFeedCollectionViewController.swift */,
 				32D78B9D201F75C40071B926 /* Main.storyboard */,
 				32D78BA0201F75C40071B926 /* Assets.xcassets */,
+				32D78BC1201F80320071B926 /* DummyImages.xcassets */,
 				32D78BA2201F75C40071B926 /* LaunchScreen.storyboard */,
 				32D78BA5201F75C40071B926 /* Info.plist */,
 				32D78BBB201F7B190071B926 /* Info-Dummy.plist */,
@@ -172,6 +175,7 @@
 			files = (
 				32D78BBC201F7DB80071B926 /* Main.storyboard in Resources */,
 				32D78BC0201F7DC80071B926 /* Assets.xcassets in Resources */,
+				32D78BC2201F80320071B926 /* DummyImages.xcassets in Resources */,
 				32D78BBF201F7DC30071B926 /* LaunchScreen.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
