@@ -71,16 +71,40 @@
 		32D78B98201F75C40071B926 /* LionHeartDemo */ = {
 			isa = PBXGroup;
 			children = (
+				32D78BC5201F86850071B926 /* View Controllers */,
 				32D78B99201F75C40071B926 /* AppDelegate.swift */,
-				32D78BAB201F78FE0071B926 /* MainFeedCollectionViewController.swift */,
-				32D78B9D201F75C40071B926 /* Main.storyboard */,
+				32D78BC3201F86360071B926 /* Art */,
+				32D78BC4201F86480071B926 /* Configuration */,
+			);
+			path = LionHeartDemo;
+			sourceTree = "<group>";
+		};
+		32D78BC3201F86360071B926 /* Art */ = {
+			isa = PBXGroup;
+			children = (
 				32D78BA0201F75C40071B926 /* Assets.xcassets */,
 				32D78BC1201F80320071B926 /* DummyImages.xcassets */,
-				32D78BA2201F75C40071B926 /* LaunchScreen.storyboard */,
+			);
+			path = Art;
+			sourceTree = "<group>";
+		};
+		32D78BC4201F86480071B926 /* Configuration */ = {
+			isa = PBXGroup;
+			children = (
 				32D78BA5201F75C40071B926 /* Info.plist */,
 				32D78BBB201F7B190071B926 /* Info-Dummy.plist */,
 			);
-			path = LionHeartDemo;
+			path = Configuration;
+			sourceTree = "<group>";
+		};
+		32D78BC5201F86850071B926 /* View Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				32D78BAB201F78FE0071B926 /* MainFeedCollectionViewController.swift */,
+				32D78B9D201F75C40071B926 /* Main.storyboard */,
+				32D78BA2201F75C40071B926 /* LaunchScreen.storyboard */,
+			);
+			path = "View Controllers";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
