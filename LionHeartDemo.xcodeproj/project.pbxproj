@@ -16,6 +16,8 @@
 		322927FC201FB837002E2541 /* Photo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 322927FB201FB837002E2541 /* Photo.swift */; };
 		322927FD201FB837002E2541 /* Photo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 322927FB201FB837002E2541 /* Photo.swift */; };
 		32292800201FC0AA002E2541 /* DummyDataProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 322927FE201FC0AA002E2541 /* DummyDataProvider.swift */; };
+		32292802201FCD43002E2541 /* GlobalHelpers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32292801201FCD43002E2541 /* GlobalHelpers.swift */; };
+		32292803201FCD43002E2541 /* GlobalHelpers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32292801201FCD43002E2541 /* GlobalHelpers.swift */; };
 		32D78B9A201F75C40071B926 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32D78B99201F75C40071B926 /* AppDelegate.swift */; };
 		32D78B9F201F75C40071B926 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 32D78B9D201F75C40071B926 /* Main.storyboard */; };
 		32D78BA1201F75C40071B926 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 32D78BA0201F75C40071B926 /* Assets.xcassets */; };
@@ -35,6 +37,7 @@
 		322927F8201F9E6B002E2541 /* PhotoFeedCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoFeedCell.swift; sourceTree = "<group>"; };
 		322927FB201FB837002E2541 /* Photo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Photo.swift; sourceTree = "<group>"; };
 		322927FE201FC0AA002E2541 /* DummyDataProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DummyDataProvider.swift; sourceTree = "<group>"; };
+		32292801201FCD43002E2541 /* GlobalHelpers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GlobalHelpers.swift; sourceTree = "<group>"; };
 		32D78B96201F75C40071B926 /* LionHeartDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = LionHeartDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		32D78B99201F75C40071B926 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		32D78B9E201F75C40071B926 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -100,6 +103,7 @@
 			children = (
 				32D78BC5201F86850071B926 /* View Controllers */,
 				32D78B99201F75C40071B926 /* AppDelegate.swift */,
+				32292801201FCD43002E2541 /* GlobalHelpers.swift */,
 				32D78BC3201F86360071B926 /* Art */,
 				32D78BC4201F86480071B926 /* Configuration */,
 			);
@@ -239,6 +243,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				322927FC201FB837002E2541 /* Photo.swift in Sources */,
+				32292802201FCD43002E2541 /* GlobalHelpers.swift in Sources */,
 				32D78B9A201F75C40071B926 /* AppDelegate.swift in Sources */,
 				322927F9201F9E6B002E2541 /* PhotoFeedCell.swift in Sources */,
 				32D78BAC201F78FE0071B926 /* MainFeedCollectionViewController.swift in Sources */,
@@ -253,6 +258,7 @@
 			files = (
 				322927FD201FB837002E2541 /* Photo.swift in Sources */,
 				32292800201FC0AA002E2541 /* DummyDataProvider.swift in Sources */,
+				32292803201FCD43002E2541 /* GlobalHelpers.swift in Sources */,
 				32D78BBE201F7DBF0071B926 /* AppDelegate.swift in Sources */,
 				322927FA201F9E6B002E2541 /* PhotoFeedCell.swift in Sources */,
 				32D78BBD201F7DBB0071B926 /* MainFeedCollectionViewController.swift in Sources */,

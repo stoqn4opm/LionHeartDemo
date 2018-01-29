@@ -16,6 +16,7 @@ class MainFeedCollectionViewController: UICollectionViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        title = "Photo Feed".localized
         prepareCollectionView()
     }
 }
