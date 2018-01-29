@@ -51,6 +51,6 @@ extension MainFeedViewModel {
     }
     
     func heightForPhoto(at indexPath: IndexPath) -> CGFloat {
-        return photoFor(indexPath).image?.size.height ?? 0
+        return photoFor(indexPath).normalisedImage?.size.height ?? 0
     }
 }

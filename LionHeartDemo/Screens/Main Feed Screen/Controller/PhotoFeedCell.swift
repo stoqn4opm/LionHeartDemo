@@ -17,6 +17,6 @@ class PhotoFeedCell: UICollectionViewCell {
     
     func configureFor(_ photo: Photo) {
         titleLabel.text = photo.title
-        imageView.image = photo.image
+        imageView.image = photo.normalisedImage
     }
 }
