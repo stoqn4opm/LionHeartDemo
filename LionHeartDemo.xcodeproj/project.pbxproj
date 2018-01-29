@@ -12,6 +12,11 @@
 		32D78B9F201F75C40071B926 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 32D78B9D201F75C40071B926 /* Main.storyboard */; };
 		32D78BA1201F75C40071B926 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 32D78BA0201F75C40071B926 /* Assets.xcassets */; };
 		32D78BA4201F75C40071B926 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 32D78BA2201F75C40071B926 /* LaunchScreen.storyboard */; };
+		32D78BAF201F7ABE0071B926 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32D78B9B201F75C40071B926 /* ViewController.swift */; };
+		32D78BB0201F7ABE0071B926 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32D78B99201F75C40071B926 /* AppDelegate.swift */; };
+		32D78BB3201F7ABE0071B926 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 32D78BA2201F75C40071B926 /* LaunchScreen.storyboard */; };
+		32D78BB4201F7ABE0071B926 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 32D78BA0201F75C40071B926 /* Assets.xcassets */; };
+		32D78BB5201F7ABE0071B926 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 32D78B9D201F75C40071B926 /* Main.storyboard */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -22,10 +27,19 @@
 		32D78BA0201F75C40071B926 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		32D78BA3201F75C40071B926 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		32D78BA5201F75C40071B926 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		32D78BB9201F7ABE0071B926 /* LionHeartDemo Dummy.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "LionHeartDemo Dummy.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		32D78BBB201F7B190071B926 /* Info-Dummy.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "Info-Dummy.plist"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
 		32D78B93201F75C40071B926 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		32D78BB1201F7ABE0071B926 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -47,6 +61,7 @@
 			isa = PBXGroup;
 			children = (
 				32D78B96201F75C40071B926 /* LionHeartDemo.app */,
+				32D78BB9201F7ABE0071B926 /* LionHeartDemo Dummy.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -60,6 +75,7 @@
 				32D78BA0201F75C40071B926 /* Assets.xcassets */,
 				32D78BA2201F75C40071B926 /* LaunchScreen.storyboard */,
 				32D78BA5201F75C40071B926 /* Info.plist */,
+				32D78BBB201F7B190071B926 /* Info-Dummy.plist */,
 			);
 			path = LionHeartDemo;
 			sourceTree = "<group>";
@@ -84,6 +100,23 @@
 			productReference = 32D78B96201F75C40071B926 /* LionHeartDemo.app */;
 			productType = "com.apple.product-type.application";
 		};
+		32D78BAD201F7ABE0071B926 /* LionHeartDemo Dummy */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 32D78BB6201F7ABE0071B926 /* Build configuration list for PBXNativeTarget "LionHeartDemo Dummy" */;
+			buildPhases = (
+				32D78BAE201F7ABE0071B926 /* Sources */,
+				32D78BB1201F7ABE0071B926 /* Frameworks */,
+				32D78BB2201F7ABE0071B926 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "LionHeartDemo Dummy";
+			productName = LionHeartDemo;
+			productReference = 32D78BB9201F7ABE0071B926 /* LionHeartDemo Dummy.app */;
+			productType = "com.apple.product-type.application";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -96,6 +129,9 @@
 				TargetAttributes = {
 					32D78B95201F75C40071B926 = {
 						CreatedOnToolsVersion = 9.2;
+						ProvisioningStyle = Automatic;
+					};
+					32D78BAD201F7ABE0071B926 = {
 						ProvisioningStyle = Automatic;
 					};
 				};
@@ -114,6 +150,7 @@
 			projectRoot = "";
 			targets = (
 				32D78B95201F75C40071B926 /* LionHeartDemo */,
+				32D78BAD201F7ABE0071B926 /* LionHeartDemo Dummy */,
 			);
 		};
 /* End PBXProject section */
@@ -129,6 +166,16 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		32D78BB2201F7ABE0071B926 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				32D78BB3201F7ABE0071B926 /* LaunchScreen.storyboard in Resources */,
+				32D78BB4201F7ABE0071B926 /* Assets.xcassets in Resources */,
+				32D78BB5201F7ABE0071B926 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
@@ -138,6 +185,15 @@
 			files = (
 				32D78B9C201F75C40071B926 /* ViewController.swift in Sources */,
 				32D78B9A201F75C40071B926 /* AppDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		32D78BAE201F7ABE0071B926 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				32D78BAF201F7ABE0071B926 /* ViewController.swift in Sources */,
+				32D78BB0201F7ABE0071B926 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -281,7 +337,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = "com.stoyan-stoyanov.LionHeartDemo";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -296,7 +352,39 @@
 				PRODUCT_BUNDLE_IDENTIFIER = "com.stoyan-stoyanov.LionHeartDemo";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
+			};
+			name = Release;
+		};
+		32D78BB7201F7ABE0071B926 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = PPF77J63K7;
+				INFOPLIST_FILE = "$(SRCROOT)/LionHeartDemo/Info-Dummy.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				OTHER_SWIFT_FLAGS = "-DDUMMY";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.stoyan-stoyanov.LionHeartDemo.Dummy";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = 1;
+			};
+			name = Debug;
+		};
+		32D78BB8201F7ABE0071B926 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = PPF77J63K7;
+				INFOPLIST_FILE = "$(SRCROOT)/LionHeartDemo/Info-Dummy.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				OTHER_SWIFT_FLAGS = "-DDUMMY";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.stoyan-stoyanov.LionHeartDemo.Dummy";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};
@@ -317,6 +405,15 @@
 			buildConfigurations = (
 				32D78BA9201F75C40071B926 /* Debug */,
 				32D78BAA201F75C40071B926 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		32D78BB6201F7ABE0071B926 /* Build configuration list for PBXNativeTarget "LionHeartDemo Dummy" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				32D78BB7201F7ABE0071B926 /* Debug */,
+				32D78BB8201F7ABE0071B926 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
