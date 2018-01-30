@@ -53,4 +53,10 @@ extension MainFeedViewModel {
     func heightForPhoto(at indexPath: IndexPath) -> CGFloat {
         return photoFor(indexPath).normalisedImage?.size.height ?? 0
     }
+    
+    func editPhotoViewModelFor(_ indexPath: IndexPath) -> EditPhotoViewModel {
+        let photo = photoFor(indexPath)
+        let result = EditPhotoViewModel(withPhoto: photo)
+        return result
+    }
 }

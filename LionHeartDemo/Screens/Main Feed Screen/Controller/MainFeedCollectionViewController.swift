@@ -44,6 +44,10 @@ extension MainFeedCollectionViewController {
         guard let photoCell = cell as? PhotoFeedCell else { return }
         photoCell.configureFor(viewModel.photoFor(indexPath))
     }
+    
+    override func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        performSegue(withIdentifier: "photoEditSegue", sender: viewModel.editPhotoViewModelFor(indexPath))
+    }
 }
 
 //MARK: - ScrollView Callbacks
@@ -67,6 +71,11 @@ extension MainFeedCollectionViewController: MainFeedCollectionViewLayoutDelegate
 //MARK: - Helper Methods
 
 extension MainFeedCollectionViewController {
+ 
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        guard segue.identifier == "photoEditSegue" else { return }
+        (segue.destination as? EditPhotoViewController)?.viewModel = sender as? EditPhotoViewModel
+    }
     
     fileprivate func updateParallaxStateForVisibleCells() {
         guard let collectionView = collectionView else { return }
