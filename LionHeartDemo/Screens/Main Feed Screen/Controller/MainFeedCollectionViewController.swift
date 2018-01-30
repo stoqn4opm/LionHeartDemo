@@ -19,6 +19,11 @@ class MainFeedCollectionViewController: UICollectionViewController {
         title = "Photo Feed".localized
         prepareCollectionView()
     }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        updateParallaxStateForVisibleCells()
+    }
 }
 
 //MARK: - CollectionView Callbacks
@@ -41,6 +46,15 @@ extension MainFeedCollectionViewController {
     }
 }
 
+//MARK: - ScrollView Callbacks
+
+extension MainFeedCollectionViewController {
+    
+    override func scrollViewDidScroll(_ scrollView: UIScrollView) {
+        updateParallaxStateForVisibleCells()
+    }
+}
+
 //MARK: - Layout Delegate
 
 extension MainFeedCollectionViewController: MainFeedCollectionViewLayoutDelegate {
@@ -53,6 +67,17 @@ extension MainFeedCollectionViewController: MainFeedCollectionViewLayoutDelegate
 //MARK: - Helper Methods
 
 extension MainFeedCollectionViewController {
+    
+    fileprivate func updateParallaxStateForVisibleCells() {
+        guard let collectionView = collectionView else { return }
+        
+        for indexPath in collectionView.indexPathsForVisibleItems {
+            guard let cell = collectionView.cellForItem(at: indexPath) as? PhotoFeedCell else { continue }
+            let newCoords = collectionView.convert(cell.center, to: view)
+            let parallaxValue = newCoords.y / UIScreen.main.bounds.height * 40 - 20
+            cell.updateParalax(to: parallaxValue)
+        }
+    }
     
     fileprivate func prepareCollectionView() {
         viewModel.collectionView = collectionView

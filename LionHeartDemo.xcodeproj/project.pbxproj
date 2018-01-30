@@ -81,9 +81,9 @@
 		32292804201FCF55002E2541 /* Controller */ = {
 			isa = PBXGroup;
 			children = (
-				322927F8201F9E6B002E2541 /* PhotoFeedCell.swift */,
 				32D78BAB201F78FE0071B926 /* MainFeedCollectionViewController.swift */,
 				322927F2201F8775002E2541 /* MainFeedCollectionViewLayout.swift */,
+				322927F8201F9E6B002E2541 /* PhotoFeedCell.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";

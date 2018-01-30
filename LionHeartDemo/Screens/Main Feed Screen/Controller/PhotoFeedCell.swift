@@ -14,6 +14,7 @@ class PhotoFeedCell: UICollectionViewCell {
     
     @IBOutlet weak var titleLabel: UILabel!
     @IBOutlet weak var imageView: UIImageView!
+    @IBOutlet weak var parallaxConstraint: NSLayoutConstraint!
     
     func configureFor(_ photo: Photo) {
         titleLabel.text = photo.title
@@ -29,5 +30,17 @@ class PhotoFeedCell: UICollectionViewCell {
         contentView.layer.cornerRadius = 9
         imageView.clipsToBounds = true
         imageView.backgroundColor = .white
+    }
+    
+    func updateParalax(to value: CGFloat) {
+        UIViewPropertyAnimator.runningPropertyAnimator(withDuration: 0.1, delay: 0, options: .beginFromCurrentState, animations: {[weak self] in
+            self?.parallaxConstraint.constant = -value
+        }, completion: nil)
+    }
+    
+    override func prepareForReuse() {
+        parallaxConstraint.constant = 0
+        imageView.image = nil
+        titleLabel.text = nil
     }
 }
