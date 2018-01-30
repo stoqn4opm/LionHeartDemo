@@ -19,4 +19,15 @@ class PhotoFeedCell: UICollectionViewCell {
         titleLabel.text = photo.title
         imageView.image = photo.normalisedImage
     }
+    
+    override func awakeFromNib() {
+        super.awakeFromNib()
+        clipsToBounds = false
+        layer.shadowOpacity = 0.7
+        layer.shadowOffset = CGSize(width: 2, height: 2)
+        contentView.clipsToBounds = true
+        contentView.layer.cornerRadius = 9
+        imageView.clipsToBounds = true
+        imageView.backgroundColor = .white
+    }
 }

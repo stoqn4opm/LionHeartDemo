@@ -44,10 +44,10 @@ extension Photo {
             _normalisedImage = originalImage.resizedTo(targetSize: CGSize(width: desiredWidth, height: desiredHeight))
         }
         else if originalImage.size.tallerThan(CGSize.photoSizeClasses.big) {
-            _normalisedImage = originalImage.resizedTo(targetSize: originalImage.size.scaledAt(0.2))
+            _normalisedImage = originalImage.resizedTo(targetSize: originalImage.size.scaledAt(0.1))
         }
         else if originalImage.size.tallerThan(CGSize.photoSizeClasses.normal) {
-            _normalisedImage = originalImage.resizedTo(targetSize: originalImage.size.scaledAt(0.3))
+            _normalisedImage = originalImage.resizedTo(targetSize: originalImage.size.scaledAt(0.2))
         }
         else if originalImage.size.tallerThan(CGSize.photoSizeClasses.small) {
             _normalisedImage = originalImage.resizedTo(targetSize: originalImage.size.scaledAt(0.8))
