@@ -316,35 +316,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="bja-uh-mbm" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1384.8" y="124.58770614692655"/>
-        </scene>
-        <!--View Controller-->
-        <scene sceneID="8cR-Y1-BF7">
-            <objects>
-                <viewController id="v78-BM-tvP" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="Xbh-YK-PVu">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                        <viewLayoutGuide key="safeArea" id="vxz-gP-jkK"/>
-                    </view>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="4A2-mr-HAW" userLabel="First Responder" sceneMemberID="firstResponder"/>
-                <stackView opaque="NO" contentMode="scaleToFill" id="8SQ-PO-Pkb">
-                    <rect key="frame" x="0.0" y="0.0" width="188" height="50"/>
-                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                    <subviews>
-                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="fDc-mt-dUB">
-                            <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
-                        </imageView>
-                        <slider opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="0.5" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="ATz-7r-bwF">
-                            <rect key="frame" x="48" y="0.0" width="142" height="51"/>
-                        </slider>
-                    </subviews>
-                    <viewLayoutGuide key="safeArea" id="06z-iO-SGc"/>
-                </stackView>
-            </objects>
-            <point key="canvasLocation" x="2101.5999999999999" y="166.8665667166417"/>
+            <point key="canvasLocation" x="1233" y="125"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="N7g-Aa-TMk">
