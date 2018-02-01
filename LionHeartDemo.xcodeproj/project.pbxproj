@@ -23,6 +23,8 @@
 		322B0B0B2020FE7D003DD7EB /* EditPhotoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 322B0B092020FE7D003DD7EB /* EditPhotoViewController.swift */; };
 		322B0B0D20210912003DD7EB /* EditPhotoViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 322B0B0C20210912003DD7EB /* EditPhotoViewModel.swift */; };
 		322B0B0E20210912003DD7EB /* EditPhotoViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 322B0B0C20210912003DD7EB /* EditPhotoViewModel.swift */; };
+		322B0B102022677D003DD7EB /* OpenImageAnimator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 322B0B0F2022677D003DD7EB /* OpenImageAnimator.swift */; };
+		322B0B112022677D003DD7EB /* OpenImageAnimator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 322B0B0F2022677D003DD7EB /* OpenImageAnimator.swift */; };
 		32D78B9A201F75C40071B926 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32D78B99201F75C40071B926 /* AppDelegate.swift */; };
 		32D78B9F201F75C40071B926 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 32D78B9D201F75C40071B926 /* Main.storyboard */; };
 		32D78BA1201F75C40071B926 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 32D78BA0201F75C40071B926 /* Assets.xcassets */; };
@@ -45,6 +47,7 @@
 		32292801201FCD43002E2541 /* GlobalHelpers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GlobalHelpers.swift; sourceTree = "<group>"; };
 		322B0B092020FE7D003DD7EB /* EditPhotoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditPhotoViewController.swift; sourceTree = "<group>"; };
 		322B0B0C20210912003DD7EB /* EditPhotoViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditPhotoViewModel.swift; sourceTree = "<group>"; };
+		322B0B0F2022677D003DD7EB /* OpenImageAnimator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OpenImageAnimator.swift; sourceTree = "<group>"; };
 		32D78B96201F75C40071B926 /* LionHeartDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = LionHeartDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		32D78B99201F75C40071B926 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		32D78B9E201F75C40071B926 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -175,6 +178,7 @@
 				32D78BA2201F75C40071B926 /* LaunchScreen.storyboard */,
 				322927F1201F874A002E2541 /* Main Feed Screen */,
 				322B0B082020FE3E003DD7EB /* Edit Photo Screen */,
+				322B0B0F2022677D003DD7EB /* OpenImageAnimator.swift */,
 			);
 			path = Screens;
 			sourceTree = "<group>";
@@ -289,6 +293,7 @@
 				32292806201FCFD8002E2541 /* DummyDataProvider.swift in Sources */,
 				322927F9201F9E6B002E2541 /* PhotoFeedCell.swift in Sources */,
 				32D78BAC201F78FE0071B926 /* MainFeedCollectionViewController.swift in Sources */,
+				322B0B102022677D003DD7EB /* OpenImageAnimator.swift in Sources */,
 				322927F3201F8775002E2541 /* MainFeedCollectionViewLayout.swift in Sources */,
 				322B0B0A2020FE7D003DD7EB /* EditPhotoViewController.swift in Sources */,
 				322927F6201F9E1A002E2541 /* MainFeedViewModel.swift in Sources */,
@@ -306,6 +311,7 @@
 				32D78BBE201F7DBF0071B926 /* AppDelegate.swift in Sources */,
 				322927FA201F9E6B002E2541 /* PhotoFeedCell.swift in Sources */,
 				32D78BBD201F7DBB0071B926 /* MainFeedCollectionViewController.swift in Sources */,
+				322B0B112022677D003DD7EB /* OpenImageAnimator.swift in Sources */,
 				322927F4201F8775002E2541 /* MainFeedCollectionViewLayout.swift in Sources */,
 				322B0B0B2020FE7D003DD7EB /* EditPhotoViewController.swift in Sources */,
 				322927F7201F9E1A002E2541 /* MainFeedViewModel.swift in Sources */,
@@ -481,7 +487,7 @@
 				INFOPLIST_FILE = "$(SRCROOT)/LionHeartDemo/Configuration/Info-Dummy.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				OTHER_SWIFT_FLAGS = "-DDUMMY";
-				PRODUCT_BUNDLE_IDENTIFIER = "com.stoyan-stoyanov.LionHeartDemo.Dummy";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.stoyan-stoyanov.LionHeartDemo.Dumm";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = 1;
@@ -497,7 +503,7 @@
 				INFOPLIST_FILE = "$(SRCROOT)/LionHeartDemo/Configuration/Info-Dummy.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				OTHER_SWIFT_FLAGS = "-DDUMMY";
-				PRODUCT_BUNDLE_IDENTIFIER = "com.stoyan-stoyanov.LionHeartDemo.Dummy";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.stoyan-stoyanov.LionHeartDemo.Dumm";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = 1;

@@ -13,17 +13,44 @@ import UIKit
 class MainFeedCollectionViewController: UICollectionViewController {
     
     fileprivate let viewModel = MainFeedViewModel()
+    fileprivate var selectedCell: UICollectionViewCell?
+    fileprivate var animator: OpenImageAnimator?
     
     override func viewDidLoad() {
         super.viewDidLoad()
         title = "Photo Feed".localized
         prepareCollectionView()
+        navigationController?.delegate = self
+        navigationController?.interactivePopGestureRecognizer?.delegate = self
     }
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         updateParallaxStateForVisibleCells()
     }
+}
+
+//MARK: - Custom Animation Callbacks
+
+extension MainFeedCollectionViewController: UINavigationControllerDelegate, UIGestureRecognizerDelegate { // UIGestureRecognizerDelegate to fix swipe back gesture
+    
+    func navigationController(_ navigationController: UINavigationController, willShow viewController: UIViewController, animated: Bool) {
+        if viewController is EditPhotoViewController {
+            animator = nil
+        } else {
+            animator = OpenImageAnimator()
+        }
+    }
+    
+    func navigationController(_ navigationController: UINavigationController, animationControllerFor operation: UINavigationControllerOperation, from fromVC: UIViewController, to toVC: UIViewController) -> UIViewControllerAnimatedTransitioning? {
+        return animator
+    }
+}
+
+extension MainFeedCollectionViewController: OpenImageAnimatable {
+    
+    var centeredView: UIView? { return selectedCell }
+    var fadeOutViews: [UIView]? { return collectionView?.visibleCells.filter( {!$0.isEqual(selectedCell)}) }
 }
 
 //MARK: - CollectionView Callbacks
@@ -46,6 +73,7 @@ extension MainFeedCollectionViewController {
     }
     
     override func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        selectedCell = collectionView.cellForItem(at: indexPath)
         performSegue(withIdentifier: "photoEditSegue", sender: viewModel.editPhotoViewModelFor(indexPath))
     }
 }
