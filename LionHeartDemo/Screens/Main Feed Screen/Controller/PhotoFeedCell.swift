@@ -16,11 +16,19 @@ class PhotoFeedCell: UICollectionViewCell {
     @IBOutlet weak var imageView: UIImageView!
     @IBOutlet weak var parallaxConstraint: NSLayoutConstraint!
     
+    fileprivate var presentedPhoto: Photo?
+    
+    
     func configureFor(_ photo: Photo) {
-        titleLabel.text = photo.title
-        imageView.image = photo.normalisedImage
+        presentedPhoto = photo
+        populate()
     }
     
+    func populate() {
+        titleLabel.text = presentedPhoto?.title
+        imageView.image = presentedPhoto?.normalisedImage
+    }
+        
     override func awakeFromNib() {
         super.awakeFromNib()
         clipsToBounds = false
@@ -30,6 +38,11 @@ class PhotoFeedCell: UICollectionViewCell {
         contentView.layer.cornerRadius = 9
         imageView.clipsToBounds = true
         imageView.backgroundColor = .white
+        NotificationCenter.default.addObserver(self, selector: #selector(photoUpdated), name: .photoUpdated, object: presentedPhoto?.title)
+    }
+    
+    deinit {
+        NotificationCenter.default.removeObserver(self, name: .photoUpdated, object: nil)
     }
     
     func updateParalax(to value: CGFloat) {
@@ -42,5 +55,9 @@ class PhotoFeedCell: UICollectionViewCell {
         parallaxConstraint.constant = 0
         imageView.image = nil
         titleLabel.text = nil
+    }
+    
+    @objc func photoUpdated() {
+        populate()
     }
 }

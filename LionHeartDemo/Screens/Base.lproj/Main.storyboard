@@ -174,14 +174,19 @@
                                                     <constraint firstAttribute="height" constant="24" id="qlZ-tD-hMB"/>
                                                 </constraints>
                                             </imageView>
-                                            <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="0.5" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="Dqf-fR-3EE">
-                                                <rect key="frame" x="38" y="0.0" width="249" height="25"/>
+                                            <slider opaque="NO" tag="1" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" minValue="-0.5" maxValue="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="Dqf-fR-3EE">
+                                                <rect key="frame" x="38" y="0.0" width="239" height="25"/>
                                                 <constraints>
-                                                    <constraint firstAttribute="width" constant="245" id="Wew-cd-W43"/>
+                                                    <constraint firstAttribute="width" constant="235" id="Wew-cd-W43"/>
                                                 </constraints>
+                                                <connections>
+                                                    <action selector="adjustmentSlider1SnapToMiddle:" destination="8rM-Ll-oSw" eventType="touchUpInside" id="2mh-mF-Mkp"/>
+                                                    <action selector="adjustmentSlider1SnapToMiddle:" destination="8rM-Ll-oSw" eventType="touchUpOutside" id="SBC-kP-JNX"/>
+                                                    <action selector="adjustmentSlider1ValueChanged:" destination="8rM-Ll-oSw" eventType="valueChanged" id="ktc-QP-nJl"/>
+                                                </connections>
                                             </slider>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="1.0" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="g2E-IP-GPD">
-                                                <rect key="frame" x="301" y="0.0" width="26" height="24"/>
+                                            <label opaque="NO" userInteractionEnabled="NO" tag="1" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="1.0" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="g2E-IP-GPD">
+                                                <rect key="frame" x="291" y="0.0" width="36" height="24"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <nil key="highlightedColor"/>
@@ -199,14 +204,19 @@
                                                     <constraint firstAttribute="height" constant="24" id="h0x-rq-P9V"/>
                                                 </constraints>
                                             </imageView>
-                                            <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="0.5" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="acq-TV-F58">
-                                                <rect key="frame" x="38" y="0.0" width="249" height="25"/>
+                                            <slider opaque="NO" tag="2" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" minValue="-0.5" maxValue="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="acq-TV-F58">
+                                                <rect key="frame" x="38" y="0.0" width="239" height="25"/>
                                                 <constraints>
-                                                    <constraint firstAttribute="width" constant="245" id="ChL-po-0hq"/>
+                                                    <constraint firstAttribute="width" constant="235" id="ChL-po-0hq"/>
                                                 </constraints>
+                                                <connections>
+                                                    <action selector="adjustmentSlider1SnapToMiddle:" destination="8rM-Ll-oSw" eventType="touchUpOutside" id="2MC-QC-NEf"/>
+                                                    <action selector="adjustmentSlider1SnapToMiddle:" destination="8rM-Ll-oSw" eventType="touchUpInside" id="Td5-mO-Db5"/>
+                                                    <action selector="adjustmentSlider2ValueChanged:" destination="8rM-Ll-oSw" eventType="valueChanged" id="oJu-aG-Ank"/>
+                                                </connections>
                                             </slider>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0.5" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Can-px-hk0">
-                                                <rect key="frame" x="301" y="0.0" width="26" height="24"/>
+                                            <label opaque="NO" userInteractionEnabled="NO" tag="2" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0.5" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Can-px-hk0">
+                                                <rect key="frame" x="291" y="0.0" width="36" height="24"/>
                                                 <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="17"/>
                                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <nil key="highlightedColor"/>
@@ -223,14 +233,19 @@
                                                     <constraint firstAttribute="height" constant="24" id="dEf-uW-A4c"/>
                                                 </constraints>
                                             </imageView>
-                                            <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="0.5" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="cbU-Op-Dde">
-                                                <rect key="frame" x="38" y="0.0" width="249" height="25"/>
+                                            <slider opaque="NO" tag="3" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" minValue="-0.5" maxValue="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="cbU-Op-Dde">
+                                                <rect key="frame" x="38" y="0.0" width="239" height="25"/>
                                                 <constraints>
-                                                    <constraint firstAttribute="width" constant="245" id="BA3-T1-kRO"/>
+                                                    <constraint firstAttribute="width" constant="235" id="BA3-T1-kRO"/>
                                                 </constraints>
+                                                <connections>
+                                                    <action selector="adjustmentSlider1SnapToMiddle:" destination="8rM-Ll-oSw" eventType="touchUpInside" id="3E2-Rs-BmN"/>
+                                                    <action selector="adjustmentSlider1SnapToMiddle:" destination="8rM-Ll-oSw" eventType="touchUpOutside" id="KP7-l5-Csi"/>
+                                                    <action selector="adjustmentSlider3ValueChanged:" destination="8rM-Ll-oSw" eventType="valueChanged" id="PXs-NR-Wyx"/>
+                                                </connections>
                                             </slider>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0.0" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jLN-dP-dw5">
-                                                <rect key="frame" x="301" y="0.0" width="26" height="24"/>
+                                            <label opaque="NO" userInteractionEnabled="NO" tag="3" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0.0" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jLN-dP-dw5">
+                                                <rect key="frame" x="291" y="0.0" width="36" height="24"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <nil key="highlightedColor"/>
@@ -253,6 +268,9 @@
                                     <barButtonItem style="plain" systemItem="flexibleSpace" id="558-ph-Tnf"/>
                                     <barButtonItem systemItem="save" id="4gP-sg-80c">
                                         <color key="tintColor" red="1" green="0.14913141730000001" blue="0.0" alpha="1" colorSpace="deviceRGB"/>
+                                        <connections>
+                                            <action selector="saveButtonTapped:" destination="8rM-Ll-oSw" id="Fna-C8-mYt"/>
+                                        </connections>
                                     </barButtonItem>
                                     <barButtonItem title="Item" id="Bgy-ho-yEf">
                                         <connections>
@@ -283,6 +301,12 @@
                         <viewLayoutGuide key="safeArea" id="OmQ-B2-V1X"/>
                     </view>
                     <connections>
+                        <outlet property="adjustmentLabel1" destination="g2E-IP-GPD" id="Mbp-2H-y42"/>
+                        <outlet property="adjustmentLabel2" destination="Can-px-hk0" id="GxN-Lw-POC"/>
+                        <outlet property="adjustmentLabel3" destination="jLN-dP-dw5" id="BLM-cc-Ynu"/>
+                        <outlet property="adjustmentSlider1" destination="Dqf-fR-3EE" id="t2q-cA-0Uj"/>
+                        <outlet property="adjustmentSlider2" destination="acq-TV-F58" id="EiE-nD-XIQ"/>
+                        <outlet property="adjustmentSlider3" destination="cbU-Op-Dde" id="yWO-rD-EYY"/>
                         <outlet property="editButton" destination="Bgy-ho-yEf" id="r1T-qG-HWs"/>
                         <outlet property="editContainer" destination="egx-Qg-6Cg" id="FxW-Or-e5E"/>
                         <outlet property="editContainerBottomConstaint" destination="xRZ-DL-4OF" id="FMs-rP-qSm"/>

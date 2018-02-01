@@ -8,6 +8,10 @@
 
 import UIKit
 
+extension NSNotification.Name {
+    static let photoUpdated = NSNotification.Name(rawValue: "photoUpdatedNotification")
+}
+
 extension Photo {
     static func defaultPhoto() -> Photo {
         return Photo(image: UIImage(named:"thumbnail") , title:"test photo")
@@ -16,7 +20,12 @@ extension Photo {
 
 class Photo {
     
-    fileprivate(set) var image: UIImage? { didSet { _normalisedImage = nil } }
+    var image: UIImage? {
+        didSet {
+        _normalisedImage = nil
+         NotificationCenter.default.post(name: .photoUpdated, object: title)
+        }
+    }
     fileprivate(set) var title: String?
     
     fileprivate var _normalisedImage: UIImage?
