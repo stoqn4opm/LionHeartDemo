@@ -24,7 +24,7 @@ class MainFeedViewModel {
         #if DUMMY
             loadDummyData()
         #else
-        
+            loadData()
         #endif
     }
 }
@@ -32,6 +32,12 @@ class MainFeedViewModel {
 //MARK: - Population
 
 extension MainFeedViewModel {
+    
+    fileprivate func loadData() {
+        PhotoFeedManager.loadPhotosWithCompletion {[weak self] (photos) in
+            self?.photos = photos
+        }
+    }
     
     fileprivate func loadDummyData() {
         DummyDataProvider.loadDummyPhotosWithCompletion {[weak self] (photos) in

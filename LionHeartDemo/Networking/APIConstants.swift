@@ -23,6 +23,10 @@ struct APIConstants {
     
     struct urls {
         
+        static func absoluteUrlFor(farm: Int, id: String, server: String, secret: String) -> String {
+            return "https://farm\(farm).staticflickr.com/\(server)/\(id)_\(secret).jpg"
+        }
+        
         static var baseURL: String {
             #if PROD
                 return "https://api.flickr.com/services/rest/"

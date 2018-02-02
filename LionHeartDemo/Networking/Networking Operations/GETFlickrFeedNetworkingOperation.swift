@@ -6,7 +6,7 @@
 //  Copyright © 2018 Stoyan Stoyanov. All rights reserved.
 //
 
-import UIKit
+import Foundation
 
 class GETFlickrFeedNetworkingOperation: BasicNetworkingOperation {
     
@@ -23,7 +23,11 @@ class GETFlickrFeedNetworkingOperation: BasicNetworkingOperation {
         NetworkingOperationManager.shared.startOperation(operation: operation)
     }
     
-    init() {
+    private override init(withUrl url: URL) {
+        super.init(withUrl: url)
+    }
+    
+   private init() {
         
         let urlString = APIConstants.urls.getRecentPublicPhotosURL
         let url = URL(string: urlString)

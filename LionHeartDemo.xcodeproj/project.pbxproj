@@ -36,16 +36,22 @@
 		32D78BBF201F7DC30071B926 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 32D78BA2201F75C40071B926 /* LaunchScreen.storyboard */; };
 		32D78BC0201F7DC80071B926 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 32D78BA0201F75C40071B926 /* Assets.xcassets */; };
 		32D78BC2201F80320071B926 /* DummyImages.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 32D78BC1201F80320071B926 /* DummyImages.xcassets */; };
+		59A096702023CEEE00C69191 /* PhotoFeedManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59A0966F2023CEEE00C69191 /* PhotoFeedManager.swift */; };
+		59A096712023CEEE00C69191 /* PhotoFeedManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59A0966F2023CEEE00C69191 /* PhotoFeedManager.swift */; };
+		59A096732023DCED00C69191 /* GETImageNetworkingOperation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59A096722023DCED00C69191 /* GETImageNetworkingOperation.swift */; };
+		59A096742023DCED00C69191 /* GETImageNetworkingOperation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59A096722023DCED00C69191 /* GETImageNetworkingOperation.swift */; };
+		59A096752023DD1E00C69191 /* APIConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59A9B18F2023B78600033F43 /* APIConstants.swift */; };
+		59A096762023DD2200C69191 /* NetworkingOperationManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59A9B1822023B28800033F43 /* NetworkingOperationManager.swift */; };
+		59A096772023DD2500C69191 /* PhotoFeedManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59A0966F2023CEEE00C69191 /* PhotoFeedManager.swift */; };
+		59A096782023DD2800C69191 /* BasicOperation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59A9B1862023B2D600033F43 /* BasicOperation.swift */; };
+		59A096792023DD2B00C69191 /* BasicNetworkingOperation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59A9B1892023B34B00033F43 /* BasicNetworkingOperation.swift */; };
+		59A0967A2023DD2D00C69191 /* GETFlickrFeedNetworkingOperation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59A9B18C2023B6C800033F43 /* GETFlickrFeedNetworkingOperation.swift */; };
+		59A0967B2023DD3000C69191 /* GETImageNetworkingOperation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59A096722023DCED00C69191 /* GETImageNetworkingOperation.swift */; };
 		59A9B1832023B28800033F43 /* NetworkingOperationManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59A9B1822023B28800033F43 /* NetworkingOperationManager.swift */; };
-		59A9B1842023B28800033F43 /* NetworkingOperationManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59A9B1822023B28800033F43 /* NetworkingOperationManager.swift */; };
 		59A9B1872023B2D600033F43 /* BasicOperation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59A9B1862023B2D600033F43 /* BasicOperation.swift */; };
-		59A9B1882023B2D600033F43 /* BasicOperation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59A9B1862023B2D600033F43 /* BasicOperation.swift */; };
 		59A9B18A2023B34B00033F43 /* BasicNetworkingOperation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59A9B1892023B34B00033F43 /* BasicNetworkingOperation.swift */; };
-		59A9B18B2023B34B00033F43 /* BasicNetworkingOperation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59A9B1892023B34B00033F43 /* BasicNetworkingOperation.swift */; };
 		59A9B18D2023B6C800033F43 /* GETFlickrFeedNetworkingOperation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59A9B18C2023B6C800033F43 /* GETFlickrFeedNetworkingOperation.swift */; };
-		59A9B18E2023B6C800033F43 /* GETFlickrFeedNetworkingOperation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59A9B18C2023B6C800033F43 /* GETFlickrFeedNetworkingOperation.swift */; };
 		59A9B1902023B78600033F43 /* APIConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59A9B18F2023B78600033F43 /* APIConstants.swift */; };
-		59A9B1912023B78600033F43 /* APIConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59A9B18F2023B78600033F43 /* APIConstants.swift */; };
 		59A9B1942023B84E00033F43 /* BasicOperation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59A9B1862023B2D600033F43 /* BasicOperation.swift */; };
 		59A9B1952023B84E00033F43 /* Photo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 322927FB201FB837002E2541 /* Photo.swift */; };
 		59A9B1962023B84E00033F43 /* GlobalHelpers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32292801201FCD43002E2541 /* GlobalHelpers.swift */; };
@@ -87,6 +93,8 @@
 		32D78BB9201F7ABE0071B926 /* LionHeartDemo Dummy.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "LionHeartDemo Dummy.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		32D78BBB201F7B190071B926 /* Info-Dummy.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "Info-Dummy.plist"; sourceTree = "<group>"; };
 		32D78BC1201F80320071B926 /* DummyImages.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = DummyImages.xcassets; sourceTree = "<group>"; };
+		59A0966F2023CEEE00C69191 /* PhotoFeedManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoFeedManager.swift; sourceTree = "<group>"; };
+		59A096722023DCED00C69191 /* GETImageNetworkingOperation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GETImageNetworkingOperation.swift; sourceTree = "<group>"; };
 		59A9B1822023B28800033F43 /* NetworkingOperationManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkingOperationManager.swift; sourceTree = "<group>"; };
 		59A9B1862023B2D600033F43 /* BasicOperation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BasicOperation.swift; sourceTree = "<group>"; };
 		59A9B1892023B34B00033F43 /* BasicNetworkingOperation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BasicNetworkingOperation.swift; sourceTree = "<group>"; };
@@ -234,6 +242,7 @@
 			children = (
 				59A9B18F2023B78600033F43 /* APIConstants.swift */,
 				59A9B1822023B28800033F43 /* NetworkingOperationManager.swift */,
+				59A0966F2023CEEE00C69191 /* PhotoFeedManager.swift */,
 				59A9B1852023B29D00033F43 /* Networking Operations */,
 			);
 			path = Networking;
@@ -245,6 +254,7 @@
 				59A9B1862023B2D600033F43 /* BasicOperation.swift */,
 				59A9B1892023B34B00033F43 /* BasicNetworkingOperation.swift */,
 				59A9B18C2023B6C800033F43 /* GETFlickrFeedNetworkingOperation.swift */,
+				59A096722023DCED00C69191 /* GETImageNetworkingOperation.swift */,
 			);
 			path = "Networking Operations";
 			sourceTree = "<group>";
@@ -388,8 +398,10 @@
 				322927FC201FB837002E2541 /* Photo.swift in Sources */,
 				32292802201FCD43002E2541 /* GlobalHelpers.swift in Sources */,
 				32D78B9A201F75C40071B926 /* AppDelegate.swift in Sources */,
+				59A096732023DCED00C69191 /* GETImageNetworkingOperation.swift in Sources */,
 				59A9B1902023B78600033F43 /* APIConstants.swift in Sources */,
 				59A9B18D2023B6C800033F43 /* GETFlickrFeedNetworkingOperation.swift in Sources */,
+				59A096702023CEEE00C69191 /* PhotoFeedManager.swift in Sources */,
 				32292806201FCFD8002E2541 /* DummyDataProvider.swift in Sources */,
 				322927F9201F9E6B002E2541 /* PhotoFeedCell.swift in Sources */,
 				32D78BAC201F78FE0071B926 /* MainFeedCollectionViewController.swift in Sources */,
@@ -407,21 +419,23 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				59A9B1882023B2D600033F43 /* BasicOperation.swift in Sources */,
 				322927FD201FB837002E2541 /* Photo.swift in Sources */,
 				32292800201FC0AA002E2541 /* DummyDataProvider.swift in Sources */,
 				32292803201FCD43002E2541 /* GlobalHelpers.swift in Sources */,
-				59A9B1912023B78600033F43 /* APIConstants.swift in Sources */,
-				59A9B18E2023B6C800033F43 /* GETFlickrFeedNetworkingOperation.swift in Sources */,
 				32D78BBE201F7DBF0071B926 /* AppDelegate.swift in Sources */,
+				59A0967B2023DD3000C69191 /* GETImageNetworkingOperation.swift in Sources */,
+				59A0967A2023DD2D00C69191 /* GETFlickrFeedNetworkingOperation.swift in Sources */,
+				59A096792023DD2B00C69191 /* BasicNetworkingOperation.swift in Sources */,
 				322927FA201F9E6B002E2541 /* PhotoFeedCell.swift in Sources */,
 				32D78BBD201F7DBB0071B926 /* MainFeedCollectionViewController.swift in Sources */,
+				59A096762023DD2200C69191 /* NetworkingOperationManager.swift in Sources */,
 				322B0B112022677D003DD7EB /* OpenImageAnimator.swift in Sources */,
+				59A096782023DD2800C69191 /* BasicOperation.swift in Sources */,
+				59A096772023DD2500C69191 /* PhotoFeedManager.swift in Sources */,
 				322927F4201F8775002E2541 /* MainFeedCollectionViewLayout.swift in Sources */,
+				59A096752023DD1E00C69191 /* APIConstants.swift in Sources */,
 				322B0B0B2020FE7D003DD7EB /* EditPhotoViewController.swift in Sources */,
 				322927F7201F9E1A002E2541 /* MainFeedViewModel.swift in Sources */,
-				59A9B1842023B28800033F43 /* NetworkingOperationManager.swift in Sources */,
-				59A9B18B2023B34B00033F43 /* BasicNetworkingOperation.swift in Sources */,
 				322B0B0E20210912003DD7EB /* EditPhotoViewModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -434,8 +448,10 @@
 				59A9B1952023B84E00033F43 /* Photo.swift in Sources */,
 				59A9B1962023B84E00033F43 /* GlobalHelpers.swift in Sources */,
 				59A9B1972023B84E00033F43 /* AppDelegate.swift in Sources */,
+				59A096742023DCED00C69191 /* GETImageNetworkingOperation.swift in Sources */,
 				59A9B1982023B84E00033F43 /* APIConstants.swift in Sources */,
 				59A9B1992023B84E00033F43 /* GETFlickrFeedNetworkingOperation.swift in Sources */,
+				59A096712023CEEE00C69191 /* PhotoFeedManager.swift in Sources */,
 				59A9B19A2023B84E00033F43 /* DummyDataProvider.swift in Sources */,
 				59A9B19B2023B84E00033F43 /* PhotoFeedCell.swift in Sources */,
 				59A9B19C2023B84E00033F43 /* MainFeedCollectionViewController.swift in Sources */,

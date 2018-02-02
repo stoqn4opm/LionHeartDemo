@@ -30,16 +30,42 @@ class Photo {
     
     fileprivate var _normalisedImage: UIImage?
     
-    init(image: UIImage?, title: String?) {
-        
+    fileprivate var farm: Int?
+    fileprivate var id: String?
+    fileprivate var server: String?
+    fileprivate(set) var secret: String?
+    
+   convenience init(image: UIImage?, title: String?, farm: Int? = nil, id: String? = nil, server: String? = nil, secret: String? = nil) {
+    
+        self.init(title: title, farm: farm, id: id, server: server, secret: secret)
         self.image = image ?? Photo.defaultPhoto().image
+    }
+    
+    init(title: String?, farm: Int? = nil, id: String? = nil, server: String? = nil, secret: String? = nil) {
+
         self.title = title ?? Photo.defaultPhoto().title
+        
+        self.farm = farm
+        self.id = id
+        self.server = server
+        self.secret = secret
     }
 }
 
 //MARK: - Helpers
 
 extension Photo {
+    
+    var absoluteURL: URL? {
+        
+        guard let farm = farm else { return nil }
+        guard let id = id else { return nil }
+        guard let secret = secret else { return nil }
+        guard let server = server else { return nil }
+        
+        let urlString = APIConstants.urls.absoluteUrlFor(farm: farm, id: id, server: server, secret: secret)
+        return URL(string: urlString)
+    }
 
     var normalisedImage: UIImage? {
     
