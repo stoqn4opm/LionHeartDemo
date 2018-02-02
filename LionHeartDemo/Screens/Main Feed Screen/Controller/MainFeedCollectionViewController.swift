@@ -68,8 +68,9 @@ extension MainFeedCollectionViewController {
     
     override func collectionView(_ collectionView: UICollectionView, willDisplay cell: UICollectionViewCell, forItemAt indexPath: IndexPath) {
         
-        guard let photoCell = cell as? PhotoFeedCell else { return }
-        photoCell.configureFor(viewModel.photoFor(indexPath))
+        guard let photoCell = cell as? PhotoFeedCell    else { return }
+        guard let photo = viewModel.photoFor(indexPath) else { return }
+        photoCell.configureFor(photo)
     }
     
     override func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {

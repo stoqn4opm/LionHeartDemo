@@ -12,12 +12,6 @@ extension NSNotification.Name {
     static let photoUpdated = NSNotification.Name(rawValue: "photoUpdatedNotification")
 }
 
-extension Photo {
-    static func defaultPhoto() -> Photo {
-        return Photo(image: UIImage(named:"thumbnail") , title:"test photo")
-    }
-}
-
 class Photo {
     
     var image: UIImage? {
@@ -38,13 +32,12 @@ class Photo {
    convenience init(image: UIImage?, title: String?, farm: Int? = nil, id: String? = nil, server: String? = nil, secret: String? = nil) {
     
         self.init(title: title, farm: farm, id: id, server: server, secret: secret)
-        self.image = image ?? Photo.defaultPhoto().image
+        self.image = image
     }
     
     init(title: String?, farm: Int? = nil, id: String? = nil, server: String? = nil, secret: String? = nil) {
 
-        self.title = title ?? Photo.defaultPhoto().title
-        
+        self.title = title
         self.farm = farm
         self.id = id
         self.server = server

@@ -25,8 +25,8 @@ class PhotoFeedCell: UICollectionViewCell {
     }
     
     func populate() {
-        titleLabel.text = presentedPhoto?.title ?? Photo.defaultPhoto().title
-        imageView.image = presentedPhoto?.normalisedImage ?? Photo.defaultPhoto().image
+        titleLabel.text = presentedPhoto?.title
+        imageView.image = presentedPhoto?.normalisedImage
     }
         
     override func awakeFromNib() {

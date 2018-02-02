@@ -50,18 +50,19 @@ extension MainFeedViewModel {
 
 extension MainFeedViewModel {
     
-    func photoFor(_ indexPath: IndexPath) -> Photo {
-        guard let photos = photos          else { return Photo.defaultPhoto() }
-        guard indexPath.row < photos.count else { return Photo.defaultPhoto() }
+    func photoFor(_ indexPath: IndexPath) -> Photo? {
+        guard let photos = photos          else { return nil }
+        guard indexPath.row < photos.count else { return nil }
+        guard indexPath.row < photos.count else { return nil }
         return photos[indexPath.row]
     }
     
     func heightForPhoto(at indexPath: IndexPath) -> CGFloat {
-        return photoFor(indexPath).normalisedImage?.size.height ?? 0
+        return photoFor(indexPath)?.normalisedImage?.size.height ?? 0
     }
     
-    func editPhotoViewModelFor(_ indexPath: IndexPath) -> EditPhotoViewModel {
-        let photo = photoFor(indexPath)
+    func editPhotoViewModelFor(_ indexPath: IndexPath) -> EditPhotoViewModel? {
+        guard let photo = photoFor(indexPath) else { return nil }
         let result = EditPhotoViewModel(withPhoto: photo)
         return result
     }
