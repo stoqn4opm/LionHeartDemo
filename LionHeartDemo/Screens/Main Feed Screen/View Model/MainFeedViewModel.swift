@@ -14,17 +14,25 @@ class MainFeedViewModel {
     
     weak var collectionView: UICollectionView?
     fileprivate(set) var photos: [Photo] = []
+    fileprivate let feedManager = PhotoFeedManager()
     
     init() {
+        NotificationCenter.default.addObserver(self, selector: #selector(photoArrived), name: PhotoFeedManager.notifications.photoDownloaded, object: nil)
+        NotificationCenter.default.addObserver(self, selector: #selector(willStartAppendingPhotos), name: PhotoFeedManager.notifications.syncWillStart, object: nil)
+        NotificationCenter.default.addObserver(self, selector: #selector(didEndAppendingPhotos), name: PhotoFeedManager.notifications.syncCompleted, object: nil)
+    }
+    
+    func start() {
         #if DUMMY
             loadDummyData()
         #else
-            PhotoFeedManager.startFetching()
+            feedManager.startFetching()
         #endif
-        NotificationCenter.default.addObserver(self, selector: #selector(photoArrived), name: PhotoFeedManager.notifications.syncCompleted, object: nil)
     }
     
     deinit {
+        NotificationCenter.default.removeObserver(self, name: PhotoFeedManager.notifications.photoDownloaded, object: nil)
+        NotificationCenter.default.removeObserver(self, name: PhotoFeedManager.notifications.syncWillStart, object: nil)
         NotificationCenter.default.removeObserver(self, name: PhotoFeedManager.notifications.syncCompleted, object: nil)
     }
 }
@@ -42,6 +50,20 @@ extension MainFeedViewModel {
         let newIndex = photos.count
         photos.append(photo)
         collectionView?.insertItems(at: [IndexPath(item: newIndex, section: 0)])
+    }
+    
+    @objc fileprivate func willStartAppendingPhotos(_ notification: Notification) {
+        collectionView?.isUserInteractionEnabled = false
+        UIView.animate(withDuration: 0.2, animations: {[weak self] in
+            self?.collectionView?.alpha = 0.6
+        })
+    }
+    
+    @objc fileprivate func didEndAppendingPhotos(_ notification: Notification) {
+        collectionView?.isUserInteractionEnabled = true
+        UIView.animate(withDuration: 0.2, animations: {[weak self] in
+            self?.collectionView?.alpha = 1
+        })
     }
 }
 

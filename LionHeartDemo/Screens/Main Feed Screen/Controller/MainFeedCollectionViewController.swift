@@ -20,6 +20,7 @@ class MainFeedCollectionViewController: UICollectionViewController {
         super.viewDidLoad()
         title = "Photo Feed".localized
         prepareCollectionView()
+        viewModel.start()
         navigationController?.delegate = self
         navigationController?.interactivePopGestureRecognizer?.delegate = self
     }

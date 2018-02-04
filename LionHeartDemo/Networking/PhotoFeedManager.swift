@@ -10,17 +10,28 @@ import Foundation
 
 extension PhotoFeedManager {
     struct notifications {
-        static let syncFailed = Notification.Name("NetworkingFetchFailed")
-        static let syncCompleted = Notification.Name("NetworkingFetchCompleted")
+        static let syncWillStart    = Notification.Name("NetworkingFetchWillStart")
+        static let photoDownloaded  = Notification.Name("NetworkingFetchSinglePhotoCompleted")
+        static let syncCompleted    = Notification.Name("NetworkingFetchCompleted")
+        static let syncFailed       = Notification.Name("NetworkingFetchFailed")
     }
 }
 
 class PhotoFeedManager {
     
-    static func startFetching() {
-        GETFlickrFeedNetworkingOperation.start {(photoList, error) in
-            guard error == nil              else { notifyFailure(); return }
-            guard let photoList = photoList else { notifyFailure(); return }
+    fileprivate(set) var expectedPhotos: Int = 0
+    fileprivate(set) var receivedPhotos: Int = 0
+    
+    func startFetching() {
+        
+        expectedPhotos = 0
+        receivedPhotos = 0
+        NotificationCenter.default.post(name: notifications.syncWillStart, object: nil)
+        
+        GETFlickrFeedNetworkingOperation.start {[weak self] (photoList, error) in
+            guard error == nil              else { PhotoFeedManager.notifyFailure(); return }
+            guard let photoList = photoList else { PhotoFeedManager.notifyFailure(); return }
+            self?.expectedPhotos = photoList.count
             
             for photoEntry in photoList {
                 guard let id    = photoEntry["id"]      as? String else { continue }
@@ -30,17 +41,22 @@ class PhotoFeedManager {
                 guard let secret = photoEntry["secret"] as? String else { continue }
                 
                 let photo = Photo(title: title, farm: farm, id: id, server: server, secret: secret)
-                downloadImageForPhoto(photo)
+                self?.downloadImageForPhoto(photo)
             }
         }
     }
     
-    private static func downloadImageForPhoto(_ photo: Photo) {
+    private func downloadImageForPhoto(_ photo: Photo) {
         guard let url = photo.absoluteURL else { return }
-        GETImageNetworkingOperation.start(forURL: url, withCompletion: { (image, error) in
+        GETImageNetworkingOperation.start(forURL: url, withCompletion: {[weak self] (image, error) in
             guard let image = image else { return }
             photo.image = image
-            NotificationCenter.default.post(name: notifications.syncCompleted, object: photo)
+            self?.receivedPhotos += 1
+            NotificationCenter.default.post(name: notifications.photoDownloaded, object: photo)
+            
+            if self?.expectedPhotos == self?.receivedPhotos {
+                NotificationCenter.default.post(name: notifications.syncCompleted, object: photo)
+            }
         })
     }
 }
