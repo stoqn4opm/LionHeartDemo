@@ -34,9 +34,7 @@ class MainFeedViewModel {
 extension MainFeedViewModel {
     
     fileprivate func loadDummyData() {
-        DummyDataProvider.loadDummyPhotosWithCompletion {[weak self] (photos) in
-            self?.photos = photos
-        }
+        DummyDataProvider.loadDummyPhotos()
     }
     
      @objc fileprivate func photoArrived(_ notification: Notification) {

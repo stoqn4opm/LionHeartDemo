@@ -18,7 +18,6 @@ extension PhotoFeedManager {
 class PhotoFeedManager {
     
     static func startFetching() {
-        return
         GETFlickrFeedNetworkingOperation.start {(photoList, error) in
             guard error == nil              else { notifyFailure(); return }
             guard let photoList = photoList else { notifyFailure(); return }
