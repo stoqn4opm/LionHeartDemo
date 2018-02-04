@@ -10,9 +10,15 @@ import UIKit
 
 class DummyDataProvider {
     
-    static func loadDummyPhotosWithCompletion(_ completion: @escaping ([Photo]) -> Void) {
-        DispatchQueue.main.asyncAfter(deadline: .now() + 1) {
-            completion(dummyPhotos)
+    static func loadDummyPhotos() {
+        var timeInterval: TimeInterval = 0
+        
+        for photo in dummyPhotos {
+            timeInterval += 0.2
+            DispatchQueue.main.asyncAfter(deadline: .now() + timeInterval, execute: {
+                
+                NotificationCenter.default.post(name: PhotoFeedManager.notifications.syncCompleted, object: photo)
+            })
         }
     }
     
