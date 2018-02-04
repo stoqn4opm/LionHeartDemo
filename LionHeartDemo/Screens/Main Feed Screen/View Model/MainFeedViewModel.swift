@@ -13,19 +13,19 @@ import UIKit
 class MainFeedViewModel {
     
     weak var collectionView: UICollectionView?
-    fileprivate(set) var photos: [Photo]? {
-        didSet {
-            (collectionView?.collectionViewLayout as? MainFeedCollectionViewLayout)?.clearCache()
-            collectionView?.reloadSections([0])
-        }
-    }
+    fileprivate(set) var photos: [Photo] = []
     
     init() {
         #if DUMMY
             loadDummyData()
         #else
-            loadData()
+            PhotoFeedManager.startFetching()
         #endif
+        NotificationCenter.default.addObserver(self, selector: #selector(photoArrived), name: PhotoFeedManager.notifications.syncCompleted, object: nil)
+    }
+    
+    deinit {
+        NotificationCenter.default.removeObserver(self, name: PhotoFeedManager.notifications.syncCompleted, object: nil)
     }
 }
 
@@ -33,16 +33,17 @@ class MainFeedViewModel {
 
 extension MainFeedViewModel {
     
-    fileprivate func loadData() {
-        PhotoFeedManager.loadPhotosWithCompletion {[weak self] (photos) in
-            self?.photos = photos
-        }
-    }
-    
     fileprivate func loadDummyData() {
         DummyDataProvider.loadDummyPhotosWithCompletion {[weak self] (photos) in
             self?.photos = photos
         }
+    }
+    
+     @objc fileprivate func photoArrived(_ notification: Notification) {
+        guard let photo = notification.object as? Photo else { return }
+        let newIndex = photos.count
+        photos.append(photo)
+        collectionView?.insertItems(at: [IndexPath(item: newIndex, section: 0)])
     }
 }
 
@@ -51,8 +52,6 @@ extension MainFeedViewModel {
 extension MainFeedViewModel {
     
     func photoFor(_ indexPath: IndexPath) -> Photo? {
-        guard let photos = photos          else { return nil }
-        guard indexPath.row < photos.count else { return nil }
         guard indexPath.row < photos.count else { return nil }
         return photos[indexPath.row]
     }

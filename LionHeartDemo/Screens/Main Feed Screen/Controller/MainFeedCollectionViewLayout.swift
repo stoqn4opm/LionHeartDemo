@@ -42,7 +42,8 @@ extension MainFeedCollectionViewLayout {
     override var collectionViewContentSize: CGSize { return CGSize(width: contentWidth ?? 0, height: contentHeight ?? 0) }
     
     override func layoutAttributesForItem(at indexPath: IndexPath) -> UICollectionViewLayoutAttributes? {
-        if cache.isEmpty { prepare() }
+        clearCache()
+        prepare()
         return cache[indexPath.item]
     }
     

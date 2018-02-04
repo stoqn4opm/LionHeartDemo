@@ -58,7 +58,7 @@ extension MainFeedCollectionViewController: OpenImageAnimatable {
 extension MainFeedCollectionViewController {
     
     override func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return viewModel.photos?.count ?? 0
+        return viewModel.photos.count
     }
     
     override func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
