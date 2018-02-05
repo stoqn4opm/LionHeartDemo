@@ -57,6 +57,7 @@ class BasicNetworkingOperation: BasicOperation {
                     return
                 }
                 strongSelf.handleResponse(data: data, error: error, response: response)
+                session.finishTasksAndInvalidate()
             })
             dataTask.resume()
         }
