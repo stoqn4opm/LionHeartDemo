@@ -54,6 +54,7 @@ extension MainFeedViewModel {
     
     @objc fileprivate func willStartAppendingPhotos(_ notification: Notification) {
         collectionView?.isUserInteractionEnabled = false
+        LoadingView.show()
         UIView.animate(withDuration: 0.2, animations: {[weak self] in
             self?.collectionView?.alpha = 0.6
         })
@@ -61,6 +62,7 @@ extension MainFeedViewModel {
     
     @objc fileprivate func didEndAppendingPhotos(_ notification: Notification) {
         collectionView?.isUserInteractionEnabled = true
+        LoadingView.hide()
         UIView.animate(withDuration: 0.2, animations: {[weak self] in
             self?.collectionView?.alpha = 1
         })

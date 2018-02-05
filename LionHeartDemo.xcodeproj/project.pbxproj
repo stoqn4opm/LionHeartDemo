@@ -36,6 +36,12 @@
 		32D78BBF201F7DC30071B926 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 32D78BA2201F75C40071B926 /* LaunchScreen.storyboard */; };
 		32D78BC0201F7DC80071B926 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 32D78BA0201F75C40071B926 /* Assets.xcassets */; };
 		32D78BC2201F80320071B926 /* DummyImages.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 32D78BC1201F80320071B926 /* DummyImages.xcassets */; };
+		590A07672028825700B7A7BB /* LoadingView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 590A07662028825700B7A7BB /* LoadingView.xib */; };
+		590A07682028825700B7A7BB /* LoadingView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 590A07662028825700B7A7BB /* LoadingView.xib */; };
+		590A07692028825700B7A7BB /* LoadingView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 590A07662028825700B7A7BB /* LoadingView.xib */; };
+		590A076B2028848C00B7A7BB /* LoadingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 590A076A2028848C00B7A7BB /* LoadingView.swift */; };
+		590A076C2028848C00B7A7BB /* LoadingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 590A076A2028848C00B7A7BB /* LoadingView.swift */; };
+		590A076D2028848C00B7A7BB /* LoadingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 590A076A2028848C00B7A7BB /* LoadingView.swift */; };
 		59A096702023CEEE00C69191 /* PhotoFeedManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59A0966F2023CEEE00C69191 /* PhotoFeedManager.swift */; };
 		59A096712023CEEE00C69191 /* PhotoFeedManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59A0966F2023CEEE00C69191 /* PhotoFeedManager.swift */; };
 		59A096732023DCED00C69191 /* GETImageNetworkingOperation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59A096722023DCED00C69191 /* GETImageNetworkingOperation.swift */; };
@@ -93,6 +99,8 @@
 		32D78BB9201F7ABE0071B926 /* LionHeartDemo Dummy.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "LionHeartDemo Dummy.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		32D78BBB201F7B190071B926 /* Info-Dummy.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "Info-Dummy.plist"; sourceTree = "<group>"; };
 		32D78BC1201F80320071B926 /* DummyImages.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = DummyImages.xcassets; sourceTree = "<group>"; };
+		590A07662028825700B7A7BB /* LoadingView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = LoadingView.xib; sourceTree = "<group>"; };
+		590A076A2028848C00B7A7BB /* LoadingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoadingView.swift; sourceTree = "<group>"; };
 		59A0966F2023CEEE00C69191 /* PhotoFeedManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoFeedManager.swift; sourceTree = "<group>"; };
 		59A096722023DCED00C69191 /* GETImageNetworkingOperation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GETImageNetworkingOperation.swift; sourceTree = "<group>"; };
 		59A9B1822023B28800033F43 /* NetworkingOperationManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkingOperationManager.swift; sourceTree = "<group>"; };
@@ -198,6 +206,7 @@
 				59A9B1812023B26900033F43 /* Networking */,
 				32D78BC5201F86850071B926 /* Screens */,
 				32292807201FCFE0002E2541 /* Model */,
+				590A07612028820900B7A7BB /* LoadingView */,
 				32D78B99201F75C40071B926 /* AppDelegate.swift */,
 				32292801201FCD43002E2541 /* GlobalHelpers.swift */,
 				32D78BC3201F86360071B926 /* Art */,
@@ -235,6 +244,15 @@
 				322B0B0F2022677D003DD7EB /* OpenImageAnimator.swift */,
 			);
 			path = Screens;
+			sourceTree = "<group>";
+		};
+		590A07612028820900B7A7BB /* LoadingView */ = {
+			isa = PBXGroup;
+			children = (
+				590A07662028825700B7A7BB /* LoadingView.xib */,
+				590A076A2028848C00B7A7BB /* LoadingView.swift */,
+			);
+			path = LoadingView;
 			sourceTree = "<group>";
 		};
 		59A9B1812023B26900033F43 /* Networking */ = {
@@ -361,6 +379,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				32D78BA4201F75C40071B926 /* LaunchScreen.storyboard in Resources */,
+				590A07672028825700B7A7BB /* LoadingView.xib in Resources */,
 				32D78BA1201F75C40071B926 /* Assets.xcassets in Resources */,
 				32D78B9F201F75C40071B926 /* Main.storyboard in Resources */,
 			);
@@ -374,6 +393,7 @@
 				32D78BC0201F7DC80071B926 /* Assets.xcassets in Resources */,
 				32D78BC2201F80320071B926 /* DummyImages.xcassets in Resources */,
 				32D78BBF201F7DC30071B926 /* LaunchScreen.storyboard in Resources */,
+				590A07692028825700B7A7BB /* LoadingView.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -382,6 +402,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				59A9B1A62023B84E00033F43 /* LaunchScreen.storyboard in Resources */,
+				590A07682028825700B7A7BB /* LoadingView.xib in Resources */,
 				59A9B1A72023B84E00033F43 /* Assets.xcassets in Resources */,
 				59A9B1A82023B84E00033F43 /* Main.storyboard in Resources */,
 			);
@@ -411,6 +432,7 @@
 				322927F6201F9E1A002E2541 /* MainFeedViewModel.swift in Sources */,
 				59A9B1832023B28800033F43 /* NetworkingOperationManager.swift in Sources */,
 				59A9B18A2023B34B00033F43 /* BasicNetworkingOperation.swift in Sources */,
+				590A076B2028848C00B7A7BB /* LoadingView.swift in Sources */,
 				322B0B0D20210912003DD7EB /* EditPhotoViewModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -436,6 +458,7 @@
 				59A096752023DD1E00C69191 /* APIConstants.swift in Sources */,
 				322B0B0B2020FE7D003DD7EB /* EditPhotoViewController.swift in Sources */,
 				322927F7201F9E1A002E2541 /* MainFeedViewModel.swift in Sources */,
+				590A076D2028848C00B7A7BB /* LoadingView.swift in Sources */,
 				322B0B0E20210912003DD7EB /* EditPhotoViewModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -461,6 +484,7 @@
 				59A9B1A02023B84E00033F43 /* MainFeedViewModel.swift in Sources */,
 				59A9B1A12023B84E00033F43 /* NetworkingOperationManager.swift in Sources */,
 				59A9B1A22023B84E00033F43 /* BasicNetworkingOperation.swift in Sources */,
+				590A076C2028848C00B7A7BB /* LoadingView.swift in Sources */,
 				59A9B1A32023B84E00033F43 /* EditPhotoViewModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
