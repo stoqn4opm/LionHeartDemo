@@ -40,6 +40,8 @@ extension CGSize {
     func scaledAt(_ scalar: CGFloat) -> CGSize {
         return CGSize(width: width * scalar, height: height * scalar)
     }
+    
+    var isLandscape: Bool { return width > height }
 }
 
 //MARK: - Image Manipulation
