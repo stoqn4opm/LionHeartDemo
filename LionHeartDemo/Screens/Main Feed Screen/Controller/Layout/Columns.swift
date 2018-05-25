@@ -33,7 +33,7 @@ final class ColumnCoordinator {
         columnWidth = inWidth / CGFloat(columnsCount)
         
         for i in 0..<columnsCount {
-            columns.append(Column(xAlignment: CGFloat(i * columnsCount)))
+            columns.append(Column(xAlignment: CGFloat(i) * columnWidth))
         }
     }
     
@@ -60,18 +60,28 @@ extension ColumnCoordinator {
             let y = longestColumn.bottomY
             let width = CGFloat(columns.count) * columnWidth
             let frame = CGRect(x: x, y: y, width: width, height: itemSize.height)
-            attributes.frame = frame.insetBy(dx: gapSize, dy: gapSize)
+            attributes.frame = frame.insetBy(dx: gapSize, dy: gapSize).nonZeroRect
             columns.forEach { $0.updateBottomYTo(frame.origin.y + frame.size.height) }
         } else {
+            let shortestColumn = self.shortestColumn
             let x = shortestColumn.xAlignment
             let y = shortestColumn.bottomY
             let width = columnWidth
             let frame = CGRect(x: x, y: y, width: width, height: itemSize.height)
-            attributes.frame = frame.insetBy(dx: gapSize, dy: gapSize)
-            shortestColumn.updateBottomYTo(frame.origin.x + frame.size.height)
+            attributes.frame = frame.insetBy(dx: gapSize, dy: gapSize).nonZeroRect
+            shortestColumn.updateBottomYTo(frame.origin.y + frame.size.height)
         }
         
         calculatedAttributes.append(attributes)
     }
 }
 
+extension CGRect {
+    
+    var nonZeroRect: CGRect {
+        return CGRect(x: origin.x == .infinity ? 0 : origin.x,
+                      y: origin.y == .infinity ? 0 : origin.y,
+                      width: size.width > 0 ? size.width : 30,
+                      height: size.height > 0 ? size.height : 30)
+    }
+}
