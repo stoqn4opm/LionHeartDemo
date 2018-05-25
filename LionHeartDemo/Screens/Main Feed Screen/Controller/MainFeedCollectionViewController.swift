@@ -93,8 +93,8 @@ extension MainFeedCollectionViewController {
 
 extension MainFeedCollectionViewController: MainFeedCollectionViewLayoutDelegate {
     
-    func collectionView(_ collectionView: UICollectionView, heightForPhotoAtIndexPath indexPath: IndexPath) -> CGFloat {
-        return viewModel.heightForPhoto(at: indexPath)
+    func collectionView(_ collectionView: UICollectionView, sizeForPhotoAtIndexPath indexPath: IndexPath) -> CGSize {
+        return viewModel.sizeForPhoto(at: indexPath)
     }
 }
 
