@@ -13,11 +13,14 @@ class DummyDataProvider {
     static func loadDummyPhotos() {
         var timeInterval: TimeInterval = 0
         
-        for photo in dummyPhotos {
+        for i in 0..<dummyPhotos.count {
             timeInterval += 0.2
             DispatchQueue.main.asyncAfter(deadline: .now() + timeInterval, execute: {
                 
-                NotificationCenter.default.post(name: PhotoFeedManager.notifications.syncCompleted, object: photo)
+                NotificationCenter.default.post(name: PhotoFeedManager.notifications.photoDownloaded, object: dummyPhotos[i])
+                if i == dummyPhotos.count - 1 {
+                    NotificationCenter.default.post(name: PhotoFeedManager.notifications.syncCompleted, object: dummyPhotos[i])
+                }
             })
         }
     }
