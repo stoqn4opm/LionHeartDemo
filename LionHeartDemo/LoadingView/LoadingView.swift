@@ -13,9 +13,9 @@ import UIKit
 extension LoadingView {
     
     static func show() {
-        guard let window = UIApplication.shared.windows.first else {printInfo("[LoadingView] show() failed"); return }
+        guard let window = UIApplication.shared.windows.last else { print("[LoadingView] show() failed"); return }
         let nib = UINib(nibName: "LoadingView", bundle: nil)
-        guard let loadingView = nib.instantiate(withOwner: window, options: nil).first as? LoadingView else { printInfo("[LoadingView] show() failed"); return }
+        guard let loadingView = nib.instantiate(withOwner: window, options: nil).first as? LoadingView else { print("[LoadingView] show() failed"); return }
         LoadingView.presentedLoadingView = loadingView
         window.addSubview(loadingView)
         
