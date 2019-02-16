@@ -5,6 +5,6 @@
       location = "container:LionHeartDemo.xcodeproj">
    </FileRef>
    <FileRef
-      location = "group:LoadingView/LoadingView.xcodeproj">
+      location = "group:Carthage/Checkouts/LoadingView/LoadingView.xcodeproj">
    </FileRef>
 </Workspace>
