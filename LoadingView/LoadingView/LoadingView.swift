@@ -12,9 +12,11 @@ import UIKit
 
 extension LoadingView {
     
-    static func show() {
+    /// Shows the `LoadingView`.
+    public static func show() {
         guard let window = UIApplication.shared.windows.last else { print("[LoadingView] show() failed"); return }
-        let nib = UINib(nibName: "LoadingView", bundle: nil)
+        let currentBundle = Bundle(for: LoadingView.self)
+        let nib = UINib(nibName: "LoadingView", bundle: currentBundle)
         guard let loadingView = nib.instantiate(withOwner: window, options: nil).first as? LoadingView else { print("[LoadingView] show() failed"); return }
         LoadingView.presentedLoadingView = loadingView
         window.addSubview(loadingView)
@@ -28,7 +30,8 @@ extension LoadingView {
         window.addConstraints([centerX, centerY])
     }
     
-    static func hide() {
+    /// Hides the `LoadingView`
+    public static func hide() {
         LoadingView.presentedLoadingView?.removeFromSuperview()
         LoadingView.presentedLoadingView = nil
     }
@@ -36,17 +39,20 @@ extension LoadingView {
 
 //MARK: - Class Definition
 
-class LoadingView: UIView {
+/// Simple loading indicator.
+///
+/// Use `LoadingView.show()` and `LoadingView.hide()` to interact with it.
+public class LoadingView: UIView {
     fileprivate static var presentedLoadingView: LoadingView?
     
-    @IBOutlet weak var spinner: UIActivityIndicatorView!
-    @IBOutlet weak var label: UILabel!
-    @IBOutlet weak var backgroundView: UIVisualEffectView!
+    @IBOutlet private weak var spinner: UIActivityIndicatorView!
+    @IBOutlet private weak var label: UILabel!
+    @IBOutlet private weak var backgroundView: UIVisualEffectView!
     
-    override func awakeFromNib() {
+    override public func awakeFromNib() {
         super.awakeFromNib()
         spinner.startAnimating()
-        label.text = "Loading...".localized
+        label.text = "Loading..."
         backgroundView.clipsToBounds = true
         backgroundView.layer.cornerRadius = 9
         backgroundView.layer.allowsEdgeAntialiasing = true

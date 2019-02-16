@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import LoadingView
 
 //MARK: - View-model's Life Cycle
 
