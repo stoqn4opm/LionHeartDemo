@@ -1,0 +1,3 @@
+[submodule "Dependencies/LoadingView"]
+	path = Dependencies/LoadingView
+	url = https://github.com/stoqn4opm/LoadingView.git
